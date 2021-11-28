@@ -1,17 +1,8 @@
 <?php
-/**
- * Insert Data
- */
-
-include('database.php');
-
-$obj = new query();
-$condition_arr = array('name'=>'Bonna', 'email'=> 'bonna@gmail.com', 'password'=>'bonnapassword');
-
-
-$result = $obj->insertData('user', $condition_arr);
-echo '<pre>';
-print_r($result);
-
-
+    include 'functions.php';
+    $obj = new query();
+    $conditionArr=array('name'=>'Bonna', 'password'=>'3333333'); //Conditions are always in array because there are several conditions
+    $allData = $obj->insertData('user',$conditionArr);
+    echo '<pre>';
+    print_r($allData);
 ?>
